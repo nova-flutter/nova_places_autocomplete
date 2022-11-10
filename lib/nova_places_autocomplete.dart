@@ -24,8 +24,8 @@ class NovaPlacesAutocomplete extends StatefulWidget {
     this.autofocus = false,
     this.debounceTime = 600,
     this.detailRequired = false,
-    this.prefixIconBuilder,
-    this.cancelIconBuilder,
+    this.prefixIcon,
+    this.cancelIcon,
     this.autocompleteOnTrailingWhitespace = false,
     this.spaceBetweenTextFieldAndSuggestions = 6,
     this.suggestionsBackgroundColor = Colors.white,
@@ -52,8 +52,8 @@ class NovaPlacesAutocomplete extends StatefulWidget {
   final bool autofocus;
   final int debounceTime;
   final bool detailRequired;
-  final Builder? prefixIconBuilder;
-  final Builder? cancelIconBuilder;
+  final Widget? prefixIcon;
+  final Widget? cancelIcon;
   final bool autocompleteOnTrailingWhitespace;
   final double spaceBetweenTextFieldAndSuggestions;
   final Color suggestionsBackgroundColor;
@@ -115,12 +115,12 @@ class _NovaPlacesAutocompleteState extends State<NovaPlacesAutocomplete> {
         controller: _textController,
         onChanged: _onTextChange,
         decoration: InputDecoration(
-          prefixIcon: widget.prefixIconBuilder ?? const Icon(Icons.search),
+          prefixIcon: widget.prefixIcon ?? const Icon(Icons.search),
           suffixIcon: GestureDetector(
             onTap: () {
               _clearText();
             },
-            child: widget.cancelIconBuilder ?? const Icon(Icons.close),
+            child: widget.cancelIcon ?? const Icon(Icons.close),
           ),
         ),
       ),
