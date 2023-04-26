@@ -1,6 +1,6 @@
 name: nova_places_autocomplete
 description: TextField lets you search for place information using a variety of categories, including establishments, prominent points of interest, and geographic locations.
-version: 1.0.0
+version: 1.0.1
 repository: 'https://github.com/nova-flutter/nova_places_autocomplete'
 issue_tracker: 'https://github.com/nova-flutter/nova_places_autocomplete/issues'
 
